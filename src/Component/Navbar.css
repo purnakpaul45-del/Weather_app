@@ -1,0 +1,600 @@
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 0 30px;
+
+  position: relative;
+  z-index: 20;
+
+  color: #ffffff;
+}
+
+
+/* ==========================================
+   BRAND
+========================================== */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+/* Weather Icon */
+
+.brand-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  font-size: 27px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+
+.brand-icon:hover {
+  transform: rotate(-8deg) scale(1.05);
+
+  background:
+    rgba(255, 255, 255, 0.18);
+}
+
+
+/* ==========================================
+   BRAND TEXT
+========================================== */
+
+.brand-text h1 {
+  margin: 0;
+
+  font-size: 30px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: inherit;
+}
+
+
+.brand-text p {
+  margin: 4px 0 0;
+
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* ==========================================
+   NAVBAR ACTIONS
+========================================== */
+
+.navbar-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* ==========================================
+   TEMPERATURE UNIT TOGGLE
+========================================== */
+
+.unit-toggle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 5px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  backdrop-filter:
+    blur(15px);
+
+  -webkit-backdrop-filter:
+    blur(15px);
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.unit-toggle:hover {
+  background:
+    rgba(255, 255, 255, 0.13);
+}
+
+
+/* Unit Buttons */
+
+.unit-toggle button {
+  width: 42px;
+
+  height: 34px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.unit-toggle button:hover {
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+}
+
+
+/* Active Unit */
+
+.unit-toggle .unit-active {
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 4px 12px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+/* Slash */
+
+.unit-toggle span {
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   MY LOCATION BUTTON
+========================================== */
+
+.location-button {
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding:
+    0 20px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  backdrop-filter:
+    blur(15px);
+
+  -webkit-backdrop-filter:
+    blur(15px);
+
+  transition:
+    all 0.3s ease;
+}
+
+
+.location-button:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    rgba(255, 255, 255, 0.16);
+
+  box-shadow:
+    0 8px 25px
+    rgba(0, 0, 0, 0.12);
+}
+
+
+.location-button:active {
+  transform:
+    translateY(0)
+    scale(0.97);
+}
+
+
+/* Location Icon */
+
+.location-icon {
+  font-size: 17px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.location-button:hover
+.location-icon {
+  transform:
+    scale(1.2);
+}
+
+
+/* ==========================================
+   THEME TOGGLE
+========================================== */
+
+.theme-toggle {
+  width: 58px;
+
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  cursor: pointer;
+
+  backdrop-filter:
+    blur(15px);
+
+  -webkit-backdrop-filter:
+    blur(15px);
+
+  transition:
+    all 0.4s ease;
+}
+
+
+.theme-toggle:hover {
+  transform:
+    rotate(15deg)
+    scale(1.08);
+
+  background:
+    rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    0 8px 25px
+    rgba(0, 0, 0, 0.15);
+}
+
+
+.theme-toggle:active {
+  transform:
+    scale(0.9);
+}
+
+
+/* ==========================================
+   THEME ICON
+========================================== */
+
+.theme-icon {
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  font-size: 22px;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.theme-toggle:hover
+.theme-icon {
+  transform:
+    rotate(180deg);
+}
+
+
+/* ==========================================
+   LIGHT MODE
+========================================== */
+
+.light-app .navbar {
+  color: #172033;
+}
+
+
+.light-app .brand-text p {
+  color:
+    rgba(23, 32, 51, 0.65);
+}
+
+
+/* Unit Toggle */
+
+.light-app
+.navbar
+.unit-toggle {
+  background:
+    rgba(255, 255, 255, 0.4);
+
+  border-color:
+    rgba(255, 255, 255, 0.4);
+}
+
+
+.light-app
+.unit-toggle button {
+  color:
+    rgba(23, 32, 51, 0.6);
+}
+
+
+.light-app
+.unit-toggle button:hover {
+  color: #172033;
+
+  background:
+    rgba(0, 0, 0, 0.05);
+}
+
+
+.light-app
+.unit-toggle
+.unit-active {
+  color: #172033;
+
+  background:
+    rgba(255, 255, 255, 0.6);
+}
+
+
+/* Location Button */
+
+.light-app
+.location-button {
+  color: #172033;
+
+  background:
+    rgba(255, 255, 255, 0.4);
+
+  border-color:
+    rgba(255, 255, 255, 0.5);
+}
+
+
+.light-app
+.location-button:hover {
+  background:
+    rgba(255, 255, 255, 0.6);
+}
+
+
+/* Theme Button */
+
+.light-app
+.theme-toggle {
+  background:
+    rgba(255, 255, 255, 0.4);
+
+  border-color:
+    rgba(255, 255, 255, 0.5);
+}
+
+
+.light-app
+.theme-icon {
+  background:
+    rgba(255, 255, 255, 0.5);
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    padding:
+      10px 0 25px;
+  }
+
+
+  .brand-text h1 {
+    font-size: 26px;
+  }
+
+
+  .brand-text p {
+    font-size: 12px;
+  }
+
+
+  .location-button {
+    padding:
+      0 15px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+
+  .navbar {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 20px;
+  }
+
+
+  .navbar-brand {
+    justify-content: center;
+
+    text-align: left;
+  }
+
+
+  .navbar-actions {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+
+  .location-button {
+    flex: 1;
+
+    min-width: 150px;
+  }
+
+
+  .theme-toggle {
+    width: 48px;
+
+    height: 48px;
+  }
+
+
+  .theme-icon {
+    width: 36px;
+
+    height: 36px;
+
+    font-size: 19px;
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+  .brand-text h1 {
+    font-size: 24px;
+  }
+
+
+  .brand-text p {
+    font-size: 11px;
+  }
+
+
+  .brand-icon {
+    width: 46px;
+
+    height: 46px;
+
+    font-size: 23px;
+  }
+
+
+  .location-button {
+    font-size: 12px;
+
+    padding:
+      0 12px;
+  }
+
+
+  .unit-toggle button {
+    width: 35px;
+  }
+
+}

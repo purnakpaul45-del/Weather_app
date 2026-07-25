@@ -1,0 +1,481 @@
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.five-day-container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 25px;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.2);
+
+  color: white;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.five-day-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+.five-day-label {
+  margin: 0;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  font-weight: 600;
+
+  opacity: 0.7;
+}
+
+
+.five-day-header h2 {
+  margin: 5px 0 0;
+
+  font-size: 28px;
+
+  font-weight: 700;
+}
+
+
+.five-day-subtitle {
+  margin: 6px 0 0;
+
+  font-size: 13px;
+
+  opacity: 0.65;
+}
+
+
+.forecast-icon {
+  width: 50px;
+
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  font-size: 25px;
+}
+
+
+/* ==========================================
+   FORECAST LIST
+========================================== */
+
+.five-day-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* ==========================================
+   FORECAST CARD
+========================================== */
+
+.five-day-card {
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    1.8fr
+    1.2fr
+    1fr
+    1fr;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 16px 20px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.five-day-card:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================
+   TODAY CARD
+========================================== */
+
+.five-day-card.today {
+  background: rgba(255, 255, 255, 0.18);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==========================================
+   DAY
+========================================== */
+
+.forecast-day {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+.forecast-day strong {
+  font-size: 16px;
+}
+
+
+.forecast-day span {
+  font-size: 12px;
+
+  opacity: 0.65;
+}
+
+
+/* ==========================================
+   WEATHER
+========================================== */
+
+.forecast-weather {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.forecast-weather img {
+  width: 48px;
+
+  height: 48px;
+
+  object-fit: contain;
+}
+
+
+.forecast-weather span {
+  font-size: 13px;
+
+  text-transform: capitalize;
+
+  opacity: 0.85;
+}
+
+
+.fallback-icon {
+  font-size: 35px;
+}
+
+
+/* ==========================================
+   TEMPERATURE
+========================================== */
+
+.forecast-temperature {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.temperature-high,
+.temperature-low {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.temperature-high span,
+.temperature-low span {
+  font-size: 11px;
+
+  opacity: 0.6;
+}
+
+
+.temperature-high strong {
+  font-size: 18px;
+}
+
+
+.temperature-low strong {
+  font-size: 15px;
+
+  opacity: 0.65;
+}
+
+
+/* ==========================================
+   FORECAST STAT
+========================================== */
+
+.forecast-stat {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.stat-icon {
+  font-size: 18px;
+}
+
+
+.forecast-stat div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.forecast-stat strong {
+  font-size: 14px;
+}
+
+
+.forecast-stat small {
+  font-size: 11px;
+
+  opacity: 0.6;
+}
+
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.five-day-empty {
+  text-align: center;
+
+  padding: 50px 20px;
+}
+
+
+.empty-icon {
+  font-size: 55px;
+
+  margin-bottom: 15px;
+}
+
+
+.five-day-empty h2 {
+  margin-bottom: 10px;
+
+  font-size: 24px;
+}
+
+
+.five-day-empty p {
+  opacity: 0.7;
+
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+  .five-day-card {
+
+    grid-template-columns:
+      1fr
+      1fr
+      1fr;
+
+    gap: 15px;
+
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .five-day-container {
+
+    width: 95%;
+
+    padding: 18px;
+
+  }
+
+
+  .five-day-header {
+
+    margin-bottom: 20px;
+
+  }
+
+
+  .five-day-header h2 {
+
+    font-size: 22px;
+
+  }
+
+
+  .five-day-subtitle {
+
+    font-size: 12px;
+
+  }
+
+
+  .five-day-card {
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    padding: 15px;
+
+    gap: 15px;
+
+  }
+
+
+  .forecast-weather {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+
+  .forecast-weather img {
+
+    width: 42px;
+
+    height: 42px;
+
+  }
+
+
+  .forecast-temperature {
+
+    gap: 15px;
+
+  }
+
+
+  .forecast-stat {
+
+    padding-top: 5px;
+
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+  .five-day-container {
+
+    width: 94%;
+
+    padding: 15px;
+
+  }
+
+
+  .five-day-card {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .five-day-header h2 {
+
+    font-size: 20px;
+
+  }
+
+
+  .forecast-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 20px;
+
+  }
+
+}

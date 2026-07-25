@@ -1,0 +1,674 @@
+/* ========================================
+   APP BASE
+======================================== */
+
+.app {
+  min-height: 100vh;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition:
+    background 1s ease,
+    color 0.5s ease;
+}
+
+
+/* ========================================
+   APP CONTENT
+======================================== */
+
+.app-content {
+  position: relative;
+
+  z-index: 10;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 20px;
+}
+
+
+/* ========================================
+   WEATHER BACKGROUND
+======================================== */
+
+.weather-background {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   DEFAULT
+======================================== */
+
+.weather-default {
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #1e293b
+    );
+}
+
+
+/* ========================================
+   CLEAR DAY
+======================================== */
+
+.weather-clear-day {
+  background:
+    linear-gradient(
+      135deg,
+      #38bdf8,
+      #2563eb,
+      #4f46e5
+    );
+}
+
+
+/* ========================================
+   CLEAR NIGHT
+======================================== */
+
+.weather-clear-night {
+  background:
+    linear-gradient(
+      135deg,
+      #020617,
+      #0f172a,
+      #172554
+    );
+}
+
+
+/* ========================================
+   CLOUDY DAY
+======================================== */
+
+.weather-cloudy-day {
+  background:
+    linear-gradient(
+      135deg,
+      #64748b,
+      #475569,
+      #334155
+    );
+}
+
+
+/* ========================================
+   CLOUDY NIGHT
+======================================== */
+
+.weather-cloudy-night {
+  background:
+    linear-gradient(
+      135deg,
+      #020617,
+      #111827,
+      #1e293b
+    );
+}
+
+
+/* ========================================
+   RAIN DAY
+======================================== */
+
+.weather-rain-day {
+  background:
+    linear-gradient(
+      135deg,
+      #334155,
+      #1e3a5f,
+      #0f172a
+    );
+}
+
+
+/* ========================================
+   RAIN NIGHT
+======================================== */
+
+.weather-rain-night {
+  background:
+    linear-gradient(
+      135deg,
+      #020617,
+      #0c1b33,
+      #172554
+    );
+}
+
+
+/* ========================================
+   THUNDERSTORM
+======================================== */
+
+.weather-thunderstorm {
+  background:
+    linear-gradient(
+      135deg,
+      #111827,
+      #312e81,
+      #020617
+    );
+}
+
+
+/* ========================================
+   SNOW
+======================================== */
+
+.weather-snow {
+  background:
+    linear-gradient(
+      135deg,
+      #bae6fd,
+      #93c5fd,
+      #64748b
+    );
+}
+
+
+/* ========================================
+   MIST
+======================================== */
+
+.weather-mist {
+  background:
+    linear-gradient(
+      135deg,
+      #94a3b8,
+      #64748b,
+      #475569
+    );
+}
+
+
+/* ========================================
+   SUN
+======================================== */
+
+.sun-animation {
+  position: absolute;
+
+  width: 220px;
+
+  height: 220px;
+
+  top: 10%;
+
+  right: 10%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #fde68a,
+      #f59e0b
+    );
+
+  box-shadow:
+    0 0 80px
+    rgba(251, 191, 36, 0.6);
+
+  animation:
+    sunPulse 4s ease-in-out infinite;
+}
+
+
+@keyframes sunPulse {
+
+  0%,
+  100% {
+    transform:
+      scale(1);
+  }
+
+  50% {
+    transform:
+      scale(1.08);
+  }
+
+}
+
+
+/* ========================================
+   HIDE SUN WHEN NOT CLEAR DAY
+======================================== */
+
+.weather-clear-day
+  .sun-animation {
+  display: block;
+}
+
+
+.weather-clear-night
+  .sun-animation {
+  display: none;
+}
+
+
+.weather-rain-day
+  .sun-animation {
+  display: none;
+}
+
+
+.weather-rain-night
+  .sun-animation {
+  display: none;
+}
+
+
+.weather-cloudy-day
+  .sun-animation {
+  opacity: 0.4;
+}
+
+
+/* ========================================
+   MOON
+======================================== */
+
+.moon-animation {
+  display: none;
+
+  position: absolute;
+
+  top: 12%;
+
+  right: 12%;
+
+  width: 100px;
+
+  height: 100px;
+
+  border-radius: 50%;
+
+  background:
+    #f8fafc;
+
+  box-shadow:
+    0 0 40px
+    rgba(255, 255, 255, 0.4);
+}
+
+
+.weather-clear-night
+  .moon-animation,
+
+.weather-cloudy-night
+  .moon-animation,
+
+.weather-rain-night
+  .moon-animation {
+  display: block;
+}
+
+
+/* ========================================
+   STARS
+======================================== */
+
+.stars {
+  display: none;
+
+  position: absolute;
+
+  inset: 0;
+}
+
+
+.weather-clear-night
+  .stars,
+
+.weather-cloudy-night
+  .stars {
+  display: block;
+}
+
+
+.star {
+  position: absolute;
+
+  width: 3px;
+
+  height: 3px;
+
+  border-radius: 50%;
+
+  background:
+    white;
+
+  animation:
+    twinkle 2s ease-in-out infinite;
+}
+
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+}
+
+
+/* ========================================
+   CLOUDS
+======================================== */
+
+.cloud {
+  position: absolute;
+
+  width: 200px;
+
+  height: 60px;
+
+  border-radius: 50px;
+
+  background:
+    rgba(255, 255, 255, 0.15);
+
+  filter:
+    blur(2px);
+
+  opacity: 0;
+
+  animation:
+    cloudMove 30s linear infinite;
+}
+
+
+.cloud::before,
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  background:
+    inherit;
+
+  border-radius: 50%;
+}
+
+
+.cloud::before {
+  width: 90px;
+
+  height: 90px;
+
+  top: -40px;
+
+  left: 35px;
+}
+
+
+.cloud::after {
+  width: 70px;
+
+  height: 70px;
+
+  top: -30px;
+
+  right: 30px;
+}
+
+
+.weather-cloudy-day
+  .cloud,
+
+.weather-cloudy-night
+  .cloud,
+
+.weather-rain-day
+  .cloud,
+
+.weather-rain-night
+  .cloud {
+  opacity: 1;
+}
+
+
+.cloud-one {
+  top: 20%;
+
+  left: -250px;
+}
+
+
+.cloud-two {
+  top: 40%;
+
+  left: -300px;
+
+  animation-delay: 10s;
+
+  transform:
+    scale(0.7);
+}
+
+
+.cloud-three {
+  top: 65%;
+
+  left: -200px;
+
+  animation-delay: 20s;
+
+  transform:
+    scale(1.2);
+}
+
+
+@keyframes cloudMove {
+
+  from {
+    transform:
+      translateX(0);
+  }
+
+  to {
+    transform:
+      translateX(
+        calc(100vw + 500px)
+      );
+  }
+
+}
+
+
+/* ========================================
+   RAIN
+======================================== */
+
+.rain-container {
+  display: none;
+
+  position: absolute;
+
+  inset: 0;
+}
+
+
+.weather-rain-day
+  .rain-container,
+
+.weather-rain-night
+  .rain-container,
+
+.weather-thunderstorm
+  .rain-container {
+  display: block;
+}
+
+
+.rain-drop {
+  position: absolute;
+
+  top: -50px;
+
+  width: 2px;
+
+  height: 25px;
+
+  background:
+    rgba(255, 255, 255, 0.5);
+
+  transform:
+    rotate(15deg);
+
+  animation:
+    rainFall 1s linear infinite;
+}
+
+
+@keyframes rainFall {
+
+  from {
+    transform:
+      translateY(-50px)
+      rotate(15deg);
+  }
+
+  to {
+    transform:
+      translateY(110vh)
+      rotate(15deg);
+  }
+
+}
+
+
+/* ========================================
+   SNOW
+======================================== */
+
+.snow-container {
+  display: none;
+
+  position: absolute;
+
+  inset: 0;
+}
+
+
+.weather-snow
+  .snow-container {
+  display: block;
+}
+
+
+.snowflake {
+  position: absolute;
+
+  top: -30px;
+
+  color:
+    white;
+
+  font-size: 16px;
+
+  opacity: 0.8;
+
+  animation:
+    snowFall 8s linear infinite;
+}
+
+
+@keyframes snowFall {
+
+  from {
+    transform:
+      translateY(-30px)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translateY(110vh)
+      rotate(360deg);
+  }
+
+}
+
+
+/* ========================================
+   ERROR
+======================================== */
+
+.weather-error {
+  margin-bottom: 20px;
+
+  padding: 15px 20px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(239, 68, 68, 0.15);
+
+  border:
+    1px solid
+    rgba(239, 68, 68, 0.3);
+
+  color:
+    #fecaca;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .app-content {
+    padding:
+      12px;
+  }
+
+
+  .sun-animation {
+    width: 120px;
+
+    height: 120px;
+
+    top: 10%;
+
+    right: -20px;
+  }
+
+
+  .moon-animation {
+    width: 70px;
+
+    height: 70px;
+
+    right: 10%;
+  }
+
+}

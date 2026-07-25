@@ -1,0 +1,278 @@
+/* ==========================================
+   HOURLY FORECAST
+========================================== */
+
+.hourly-forecast {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 30px auto;
+
+  padding: 30px;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 50px
+    rgba(0, 0, 0, 0.2);
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.hourly-header {
+  margin-bottom: 25px;
+}
+
+
+.hourly-header h2 {
+  margin: 0;
+
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+
+.hourly-header p {
+  margin: 6px 0 0;
+
+  font-size: 14px;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* ==========================================
+   HOURLY CONTAINER
+========================================== */
+
+.hourly-container {
+  display: flex;
+
+  gap: 14px;
+
+  overflow-x: auto;
+
+  padding: 5px 5px 15px;
+}
+
+
+/* ==========================================
+   HOURLY CARD
+========================================== */
+
+.hourly-card {
+  min-width: 145px;
+
+  padding: 18px 15px;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.hourly-card:hover {
+  transform: translateY(-5px);
+
+  background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ==========================================
+   TIME
+========================================== */
+
+.hourly-time {
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ==========================================
+   ICON
+========================================== */
+
+.hourly-icon {
+  width: 65px;
+
+  height: 65px;
+
+  object-fit: contain;
+
+  margin: 12px 0;
+}
+
+
+/* ==========================================
+   TEMPERATURE
+========================================== */
+
+.hourly-temperature {
+  margin: 0;
+
+  font-size: 25px;
+
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.hourly-description {
+  margin: 8px 0 15px;
+
+  min-height: 35px;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  text-transform: capitalize;
+}
+
+
+/* ==========================================
+   DETAILS
+========================================== */
+
+.hourly-detail {
+  width: 100%;
+
+  padding: 5px 0;
+
+  font-size: 11px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.hourly-container::-webkit-scrollbar {
+  height: 7px;
+}
+
+
+.hourly-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+
+  border-radius: 10px;
+}
+
+
+.hourly-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+
+  border-radius: 10px;
+}
+
+
+.hourly-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+  .hourly-forecast {
+    width: calc(100% - 30px);
+
+    padding: 25px 20px;
+  }
+
+
+  .hourly-header h2 {
+    font-size: 21px;
+  }
+
+
+  .hourly-card {
+    min-width: 135px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+  .hourly-forecast {
+    width: calc(100% - 20px);
+
+    padding: 20px 15px;
+
+    border-radius: 20px;
+  }
+
+
+  .hourly-card {
+    min-width: 125px;
+
+    padding: 15px 12px;
+  }
+
+
+  .hourly-icon {
+    width: 55px;
+
+    height: 55px;
+  }
+
+
+  .hourly-temperature {
+    font-size: 22px;
+  }
+
+}
